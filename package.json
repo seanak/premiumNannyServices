@@ -2,7 +2,7 @@
   "name": "nanny-website",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://seanak.github.io/premiumnanny_website",
+  "homepage": "https://seanak.github.io/premiumnanny_services",
   "type": "module",
   "scripts": {
     "dev": "vite",
