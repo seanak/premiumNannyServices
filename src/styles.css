@@ -1,0 +1,380 @@
+/* --- GLOBAL STYLES --- */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff; /* Alice Blue for a soft background */
+}
+
+
+
+.container {
+  padding: 2rem;
+  max-width: 960px;
+  margin: auto;
+}
+
+/* --- HERO TEXT SECTION --- */
+.hero-text-section {
+  background-color: #fff;
+  color: #333;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+/* --- HERO SLIDESHOW SECTION --- */
+.hero-slideshow-section {
+  background-color: #000;
+  padding: 2rem 0;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 700px;
+  margin: auto;
+  overflow: hidden;
+  background-color: #000; /* Black background for letterboxing */
+  transition: height 0.5s ease-in-out;
+}
+
+@keyframes rise {
+  0% {
+    bottom: -150px;
+    opacity: 0.8;
+  }
+  100% {
+    bottom: 100vh;
+    opacity: 0;
+  }
+}
+
+@keyframes kenburns-effect {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.15);
+  }
+}
+
+.slideshow-container .hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Show full image */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slideshow-container .hero-image.active {
+  opacity: 1;
+  filter: saturate(1.1) contrast(1.05);
+}
+
+h1, h2 {
+  color: #004080;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 0.5rem 0;
+  padding-left: 1rem;
+  position: relative;
+}
+
+ul li::before {
+  content: '✔';
+  color: #007bff;
+  position: absolute;
+  left: 0;
+}
+
+/* --- SERVICES & RENTALS SECTION --- */
+.rentals-section {
+  padding: 3rem 0;
+  background-color: #f9f9f9;
+}
+
+.rentals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.rental-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rental-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.rental-card h3 {
+  color: #004080;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* --- SERVICES SECTION --- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-card h3 {
+  color: #004080;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.testimonials-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.testimonial-card {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-text {
+  font-style: italic;
+  color: #555;
+  margin: 0 0 1rem;
+}
+
+.testimonial-author {
+  font-weight: bold;
+  color: #004080;
+  text-align: right;
+}
+
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* --- HERO HEADER --- */
+.hero-header {
+  background-color: #002b5c; /* A darker blue */
+  color: #ffffff;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.hero-header p {
+  margin: 0;
+}
+
+/* --- HEADER NAVIGATION --- */
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: #004080;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.site-title {
+  font-size: 0.3rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* --- CONTACT SECTION --- */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.contact-info p {
+  max-width: 600px;
+  margin-bottom: 1rem;
+}
+
+.cta-button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+  width: 100%;
+}
+
+.contact-info span {
+  font-weight: normal;
+}
+
+/* --- FACEBOOK LINK --- */
+
+/* --- GALLERY PAGE --- */
+.gallery-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- BALLOONS --- */
+.floating-balloons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000; /* On top of all content */
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.balloon {
+  position: absolute;
+  bottom: -150px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  opacity: 0;
+  animation-name: rise;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.balloon::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.facebook-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #1877f2;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.facebook-link img {
+  width: 24px; /* You can adjust this size */
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+
+.facebook-link img:hover {
+  transform: scale(1.1);
+}
