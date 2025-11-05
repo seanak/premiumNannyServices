@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
 import content from './properties/content';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './Home';
 import Gallery from './Gallery';
 
@@ -15,8 +15,8 @@ function App() {
         <header className="header">
           <h1 className="site-title">{content.title}</h1>
           <nav className="nav">
-            <a href="/">Home</a>
-            <a href="/gallery" target="_blank" rel="noopener noreferrer">Gallery</a>
+            <Link to="/">Home</Link>
+            <Link to="/gallery">Gallery</Link>
           </nav>
         </header>
 
