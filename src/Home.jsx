@@ -8,7 +8,11 @@ const Home = () => {
     <main id="home">
       <section className="hero-text-section">
         <div className="container">
-          <h1 className="hero-title">{content.hero.title}</h1>
+          <h1 className="hero-title">
+            {content.hero.title}
+            <br />
+            {content.hero.location}
+          </h1>
           <p className="hero-description">{content.hero.description}</p>
           <a href="#contact" className="cta-button">Contact Us</a>
         </div>

@@ -1,7 +1,8 @@
 const content = {
-  title: 'Premium Nanny Services — Tbilisi Georgia',
+  title: 'Premium Nanny Services — Tbilisi, Georgia',
   hero: {
-    title: 'Loving and Professional Nanny Care',
+    title: 'Professional and Loving Nanny Care',
+    location: 'Tbilisi, Georgia',
     description:
       'Your family’s peace of mind is our priority. We provide meticulously vetted, highly experienced nannies dedicated to delivering exceptional, compassionate care for your little ones.',
   },
