@@ -10,7 +10,7 @@ function App() {
     <Router>
       <div className="app-container">
         <div className="hero-header">
-          <p>Premium Nanny Services</p>
+          <p>Premium Nanny Services — Tbilisi Georgia</p>
         </div>
         <header className="header">
           <h1 className="site-title">{content.title}</h1>

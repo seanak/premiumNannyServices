@@ -1,5 +1,5 @@
 const content = {
-  title: 'Premium Nanny Service',
+  title: 'Premium Nanny Services — Tbilisi Georgia',
   hero: {
     title: 'Loving and Professional Nanny Care',
     description:
